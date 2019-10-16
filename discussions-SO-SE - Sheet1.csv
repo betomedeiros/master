@@ -1,0 +1,910 @@
+,,,,,,,,,,
+Stack Overflow Discussions,,,,,,,,,,
+Id,OwnerUserId,CreationDate,Tags,AnswerCount,CommentCount,FavoriteCount,ViewCount,Score,Title,Body
+54508906,11010289,2019-02-04 0:17:47,<java><emf><ecore><mde>,1,0,0,35,-1,EMF recusive subproperties,"<p>As you can see, the metamodel has a Test, which has properties. These can also have subproperties. </p>
+
+<p>I want now to code a method, which gives back the properties as well as all other subproperties. Here is the naive approach without recursion. Please help me. </p>
+
+<pre class=""lang-java prettyprint-override""><code>public EList&lt;TestProperty&gt; getProperties() {
+        if (properties == null) {
+            properties = new EObjectContainmentEList&lt;TestProperty&gt;(TestProperty.class, this,
+                    Iec62264Package.TEST__PROPERTIES);
+        }
+        for (TestProperty property : properties) {
+            properties.add(property.getSubProperties());
+        }
+        return properties;
+    }
+</code></pre>
+
+<p><a href=""https://i.stack.imgur.com/IXNNq.png"" rel=""nofollow noreferrer"">Metamodel</a></p>
+"
+50426449,9643227,2018-05-19 14:39:31,<code-generation><acceleo><mde>,1,0,0,137,0,Acceleo Trasformation - Package with uri '*' not found.,"<p>When I try do to an acceleo trasformation I get this error: </p>
+
+<pre><code>Exception in thread ""main"" org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://www.eclipse.org/mmt/qvtd/UmlToRdbms#rdbmsMM' not found. (file:/D:/Utenti/davi9/mde-workspace/Assignment2/Models/dummy.xmi, 7, 108)
+    at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+    at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+    at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:406)
+    at org.eclipse.acceleo.common.utils.ModelUtils.load(ModelUtils.java:391)
+    at org.eclipse.acceleo.common.utils.ModelUtils.load(ModelUtils.java:356)
+    at org.eclipse.acceleo.engine.service.AbstractAcceleoGenerator.initialize(AbstractAcceleoGenerator.java:488)
+    at org.eclipse.acceleo.module.sample.common.Generate.&lt;init&gt;(Generate.java:90)
+    at org.eclipse.acceleo.module.sample.common.Generate.main(Generate.java:144)
+Caused by: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://www.eclipse.org/mmt/qvtd/UmlToRdbms#rdbmsMM' not found. (file:/D:/Utenti/davi9/mde-workspace/Assignment2/Models/dummy.xmi, 7, 108)
+</code></pre>
+
+<p>.....</p>
+
+<p>How can I solve this problem?</p>
+"
+48951992,790053,2018-02-23 16:11:41,<intellij-idea><eclipse-emf><emf><ecore><mde>,1,0,0,478,3,How to build EMOF models in IntelliJ and generate code from them?,"<p>What is the best way to build models in IntelliJ, in the style of Eclipse <a href=""https://www.eclipse.org/modeling/emf/"" rel=""nofollow noreferrer"">EMF</a> ? </p>
+
+<p>Is there an equivalent of Eclipse <a href=""https://www.eclipse.org/modeling/emf/"" rel=""nofollow noreferrer"">EMF</a> in IntelliJ ?
+And is there something that adheres to standards such as EMOF in the same way that EMF Ecore is aligned to it ?</p>
+
+<p>I found a plugin that seems to help with that <a href=""https://plugins.jetbrains.com/plugin/7504-kevoree-modeling-framework-idea-plugin"" rel=""nofollow noreferrer"">here</a>, but I am wondering if there are other/better options.</p>
+"
+45888912,8518336,2017-08-25 20:24:25,<emf><metamodel><mda>,1,0,0,33,0,How to create a new meta-formalism?,"<p>I'm newbie with the using of EMF.
+I understand the theory of MDA and MDD, and does some practice using Atom3 and AtomPM.
+I know how to create a meta-model and meta-formalism (meta-meta-model) and how to create transformation rules using the two previous tools.
+So, i need to know how to create a new meta-formalism(meta-meta-model) using EMF and how to create a meta-model using it. and how to create a model using the new meta-model.
+Think you.</p>
+"
+43020588,1911196,2017-03-25 18:56:10,<transformation><dsl><model-driven><epsilon><model-driven-development>,1,0,0,101,0,UML to HUTN (Human-Usable Textual Notation),"<p>The epsilon project (based on eclipse) promises <a href=""http://www.eclipse.org/epsilon/doc/articles/hutn-basic/"" rel=""nofollow noreferrer"">here</a> to transform XMI to HUTN. I can't find any documentation for this purpose. Is it too trivial? I don't get it</p>
+
+<p>Thanks for any advice</p>
+"
+41781254,6454129,2017-01-21 15:45:50,<ocl><model-driven-development>,1,0,0,59,0,OCL - calling rule,"<p>What does the below code do? How can I write this OCL expression when there is one element instead of elements?</p>
+
+<p>In other words, I don't understand which elements does the code collect?
+Since ""collect"" is used when we have more than one element, if I have one element (instead of elements), what changes occure to ""-> collect (s|thisModule.CreateMatchClass(s))"" part of that expression?</p>
+
+<pre><code>s.source.elements -&gt; collect (s|thisModule.CreateAnyMatchClass(s))
+</code></pre>
+
+<p><a href=""https://i.stack.imgur.com/wBvDp.jpg"" rel=""nofollow noreferrer""><img src=""https://i.stack.imgur.com/wBvDp.jpg"" alt=""enter image description here""></a></p>
+"
+40820434,6454129,2016-11-26 16:25:25,<epsilon><model-driven>,1,0,0,52,0,ETL is interpreted or compiled language,"<p>Is Epsilon transformation language (ETL) <code>interpreted</code> or <code>compiled</code> language?</p>
+"
+38420076,6454129,2016-07-17 10:05:45,<eclipse><emf><model-driven><model-driven-development>,2,0,0,397,0,Class diagram from ecore,"<p>I have .ecore metamodel. How can I automatically generate class diagram from it?</p>
+"
+37269243,3053097,2016-05-17 7:01:47,<eclipse><mde><eclipse-atl>,1,0,0,240,0,ATL to EMFTVM compiler,"<p>Several approaches intended to run EMFTVM model to model transformations have appeared (see <a href=""http://modeling-languages.com/executing-atl-transformations-java/"" rel=""nofollow"">http://modeling-languages.com/executing-atl-transformations-java/</a>).</p>
+
+<p>However, all of these deal with EMFTVM transformations. I am in the case in which I have to run generated ATL transformations (with a HOT). Could I use a compiler from ATL to EMFTVM and use the Java code to run this resulting transformation afterwards?</p>
+"
+32154850,5254741,2015-08-22 10:05:36,<mda>,1,0,0,176,0,Active Model Driven Architecture (MDA) Tools,"<p>Could you provide a list of active <strong>MDA tools</strong> like AndroMDA? Tools like <em>arcstyler</em> or <em>optimalj</em> seems to be discontinued.</p>
+"
+30412913,3632206,2015-05-23 12:54:06,<ruby-on-rails><model-driven-development><graphical-programming>,1,0,0,201,0,Are there visual/graphical MDD tools for Ruby on Rails?,"<p>This is going to be pretty vague, so I hope I done get banned for it. </p>
+
+<p>I've been learning about various dynamic web tools such as ruby on rails that can require a huge number of referencing between files (master view controllers, assets etc). Typically, when designing a rails application, I now draw the whole thing out in inkscape so that I have a visual representation of how all the files are connected to one another. </p>
+
+<p>It would be really useful if I could translate the simple workflow diagram into some skeletal code. For example dragging a red block onto the page would create a controller, dragging an arrow in a direction towards a named view would then create the <code>def</code> in the controller etc etc. It's just an idea, but I wondered as a result if there were any graphical tools I could manipulate in order to do this kind of task?</p>
+
+<p>If such a tool doesn't exist I'm happy to try and code one up myself - any ideas for a starting point?</p>
+"
+27762014,3233595,2015-01-04 3:18:06,<uml><constraints><ocl><mda>,1,0,0,304,1,OCL Stereotype Constraint: Any association that is coloured all connected classes have the same colour,"<p>Quite new to OCL, thanks for the help.</p>
+
+<p>So I have a profile with the stereotypes as shown:</p>
+
+<p><img src=""https://i.stack.imgur.com/iCfuH.png"" alt=""Profile""></p>
+
+<p>Can someone tell me how to write an invariant constraint that says any association that is Coloured means that all connected classes must have the same colour value in their colour property?</p>
+
+<p>I had this so far:</p>
+
+<pre><code>Context UML::InfrastructureLibrary::Core::Constructs::Association
+inv: Association.allInstances() -&gt; forAll(a:Association|a.oclIsTypeOf(Coloured) implies 
+    a.associatedElement.colour = a.colour)
+</code></pre>
+
+<p>Pretty sure this is wrong because a.associatedElement does not exist.. but I do not understand how to access this 'all connected classes' or what that means. Perhaps I need something like </p>
+
+<p><code>a.[association].colour</code> ?</p>
+
+<p>Thanks</p>
+"
+26303001,2947716,2014-10-10 15:34:21,<uml><bpmn><mda><andromda>,1,1,0,752,1,Generate code from Business Process Model and Notation (BPMN) with androMDA,"<p>I know that AndroMDA generate code from UML model,</p>
+
+<p>my question is:
+it is possible to generate code from BPMN model (Business Process Model and Notation) with androMDA (i.e create a new cartridge which support BPMN)?</p>
+"
+24462670,401828,2014-06-28 1:10:03,<c#><python><architecture><domain-model><mda>,1,0,0,118,1,Implement same domain model in Python and C# - What should be the same and what should vary?,"<p>I am, as a hobby and best-practice exercise, to implement the same domain model (a simple GPS / GIS library, inspired in ISO 191xx stardards and OGC Abstract Model) both in Python and C#.</p>
+
+<p>It first, I tought: ""well, ISO/OGC gave me a finished UML, so I will have each class in C# and in Python to have the same signature"".</p>
+
+<p>I quickly found myself stuck in the ""strict/static vs duck typing"" problem, since I cannot count on method signatures in python. For example:</p>
+
+<ul>
+<li>Overloading constructors is quite common and natural in C#, but in Python you have to resort to <code>*args **kwargs</code> and conditionals;</li>
+<li>Properties are encouraged in C#, but most source code I have seen around in Python tend to set the fields directly, although the use of <code>@property</code> or <code>property()</code> is quite straightforward.</li>
+<li>(and so on).</li>
+</ul>
+
+<p>Actually there is (obviously) an obvious and very well documented ""difference in mindsets"" between one language and the other, and I would like to respect those differences while at the same time ending up with ""the same"" application, that is, equivalent domain model, architecture and functionality.</p>
+
+<p>So my question basically is:</p>
+
+<blockquote>
+  <p>If I am to implement the same abstract model (""UML-like"") in Python and C#, how should I proceed, and specifically, which constructs should be invariant, and which should be different?</p>
+</blockquote>
+"
+24251927,1375882,2014-06-16 20:46:34,<ide><oracle-adf><jdeveloper><model-driven><model-driven-development>,1,0,0,708,0,How to programmatically create Oracle ADF Essentials components - API for ADF and JDeveloper,"<p>Some prominent IDE's have API that let developers create modules (IDE plugins, extensions) that interact with editors and other IDE components. E.g. Embarcadero Delphi has Open Tools API, that allows developers to create (and integrate into Delphi IDE) modules that programmatically creates forms, places components on them, writes code inside files and so on. These are great features because they let developers to integrate those frameworks (VCL, ADF and so on) into Model Driven Development (MDD) workflows (be it commercially provided or custom made by team of developers).</p>
+
+<p>The question is - have JDeveloper such features - to create modules programmatically. E.g. one can imagine the workflow where UML class diagram is created by some third party tool. Is it possible to write some MDD transformation module (as JDeveloper plugin) that programmtically generates required ADF business components and web forms?</p>
+
+<p>Certainly business components and forms can be created manually but does Oracle ADF or JDeveloper expose some API that could let create those components and forms programmtically without interaction with users. All the input data can be provided as XML file (that is output from UML designer or some other tool).</p>
+
+<p>As far as I know there is JDeveloper Extensions but in Oracle forums I have received answers that JDeveloper Extensions are not intended for such a use.</p>
+
+<p>I guess that ADF Essentials is becoming quite popular and there should be some interest to integrate ADF Essentials into MDD workflows. Maybe there are some hidden JDeveloper Extensions features or maybe even separate open source projects that already enable such integration.</p>
+
+<p>Certainly, ADF business components and forms are usual code (XML, Java) files and the process to generate them can be reverse-engineered. Maybe there are some ongoing efforts to do that? I could contribute to them and not to start new project from scratch.</p>
+
+<p>JDeveloper itself has some MDD features but I am not sure if these are rich and flexible enough.</p>
+"
+24180107,3679797,2014-06-12 8:49:40,<mde><qvt>,1,0,0,313,0,what's the difference between QVTo and QVTr transformation?,"<p>I want to do a model to model transformation, from a model based on Java metamodel to a model based on C++ metamodel.
+I did some research and I found that QVT allow a bidirectional transformation but there is two types of QVT and I don't understand the difference between them, who is the more suitable for my project QVTo or QVTr ?</p>
+"
+24055973,3679797,2014-06-05 9:05:41,<model-driven-development><mde>,1,0,1,699,2,Choosing between ATL and QVT for model to model transformation,"<p>I want to transform a model (in XMI format) based on the JaMoPP Java 5 metamodel to another model (also in XMI format) based on a basic C++ metamodel that I created using Xtext. After some research, I found two tools for Model To Model transformations: ATL and QVT.</p>
+
+<p>What are the main differences between the two and what are some reasons to use either one instead of the other?</p>
+"
+23413096,3593528,2014-05-01 17:32:51,<generator><opendaylight><model-driven><ietf-netmod-yang>,2,0,1,4274,1,Use YANG Tools as a Java code generator for MD-SAL in Opendaylight,"<p>Recently I study the API definition for Opendaylight. </p>
+
+<p>As we know, YANG is a modeling language for NETCONF. However, Opendaylight uses it as a Java code generator for MD-SAL. </p>
+
+<p>So I am wondering :</p>
+
+<ol>
+<li><p>How does YANG Tool help generate Java code for MD-SAL? </p></li>
+<li><p>Do you have some YANG code generator tutorials?</p></li>
+</ol>
+
+<p>Thanks.</p>
+"
+22845028,3488996,2014-04-03 17:39:03,<eclipse><emf><mda><ecore>,1,0,0,843,1,Defining my own datatypes within my own metamodel using EMF Ecore,"<p>I was wondering how can I define my own datatypes within a metamodel created using EMF Ecore ?</p>
+
+<p>The goal is to have a class that may contain many attribute. Each attribute has one Datatype.</p>
+
+<p>The problem I am facing now is when I want to set the attribute datatype [in a model which is conforme to my metamodel ] in the Property View (Eclipse EMF), I get an empty list.</p>
+
+<p>I want something similar to when adding an EAttribute , you get the choice between different Etype (EString, EBoolean,...).</p>
+
+<p>I appreciate any help.</p>
+
+<p>Thank you.</p>
+"
+18824049,1221966,2013-09-16 8:58:19,<java><enterprise-architect><mda>,2,0,0,318,0,Enterprise Architect - MDA converst Map to List,"<p>I am using EA for creation of PIM. When I generate java code directly I am getting correct data type where I want - Map where I set qualifiers on association properties which as I understand meas that it is going to be a map. And that works as expected. Hovewer when I do the MDA transformation and generete code - properties are conveted to List (which is bad) bug setters and getters method keep using Map as in the following example:</p>
+
+<pre><code>public class Check {
+
+private List&lt; Comp&gt; comps;
+private List&lt; Gratuity&gt; gratuities;
+
+public Check(){
+
+}
+
+public Map&lt;String, Comp&gt; getcomps(){
+    return comps;
+}
+
+public Map&lt;String, Gratuity&gt; getgratuities(){
+    return gratuities;
+}
+</code></pre>
+
+<p>I am using default transformation package for Java. I tried to add following line to Java transformation for connector is source section </p>
+
+<pre><code>%connectorType%
+%PI=""\n  ""%
+{
+%TRANSFORM_CURRENT()%
+%TRANSFORM_REFERENCE(""Connector"",connectorGUID)%
+Source
+{
+%TRANSFORM_REFERENCE(""Class"",connectorSourceElemGUID)%
+access=%qt%%connectorSourceAccess == ""Public"" ? ""Private"" : value%%qt%
+qualifier=%connectorSourceQualifier%
+%TRANSFORM_CURRENT(""Source"",""access"")% 
+}
+Target
+{
+%TRANSFORM_REFERENCE(""Class"",connectorDestElemGUID)%
+access=%qt%%connectorDestAccess == ""Public"" ? ""Private"" : value%%qt%
+%TRANSFORM_CURRENT(""Target"",""access"")%
+%PI=""\n""%
+}
+}
+</code></pre>
+
+<p>but that doesn't seem to help</p>
+"
+17085426,1069981,2013-06-13 11:01:48,<ios><modeling><eclipse-emf-ecore><model-driven-development><xpand>,1,0,0,261,0,Eclipse Modeling Framework and XPAND - How to create iOS metamodel?,"<p>I want to define a model driven approach with Eclipse Modeling Framework (EMF) and XPAND. Therefore I want to define a platform specific metamodel (PSM) with Ecore and write XPAND templates for code generation for the iOS platform. <br>
+My question is:<br>
+Is it possible to define such a PSM for the iOS platform in EMF? Because iOS or other platforms have own data types. I can also define data types with <code>EDataType</code> but they have to be related to the JAVA data types or? <br>
+Anyone has an advice?</p>
+
+<p>Thanks</p>
+"
+16638131,2399437,2013-05-19 18:38:51,<code-generation><reusability><eclipse-emf><eclipse-emf-ecore><mda>,2,0,0,64,0,Reusing Ecore model componets,"<p>is there a way to reuse EMF-Ecore model components in another Ecore model?</p>
+"
+15966601,2405757,2013-04-12 8:31:38,<eclipse-emf><ecore><mdd><xcore>,1,0,1,1108,4,How to export Xcore to Ecore?,"<p>Defining metamodels with Xcore is a lot easier than with EMF and Ecore. The problem is that I need the metamodels as Ecore files. Is it possible to export Xcore model to Ecore model? I don't see any export options in Eclipse.</p>
+"
+15699822,2172937,2013-03-29 8:29:39,<class><uml><metamodel><mda><eclipse-atl>,3,1,1,2679,1,UML class diagram metamodel,"<p>Where can I find a simplified class diagram metamodel ?
+It's for a ATL ATLAS Transformation Language project, I need to transform a entity class diagram to SQL database.
+thank you .</p>
+"
+15108717,1731654,2013-02-27 9:39:55,<c#><enterprise-architect><mda>,1,0,1,276,1,Is it possible to perform an MDA Transformation via C#,"<p>I'm using the Enterprise Architect 10.0.1006 to create ""Platform Specific Models"" (PSM) from an ""Platform Independent Model"" (PIM). The PIM is an common codel which declares datatypes with a generic description. You can transform this common model to a specific Model (Java, C++, Php and so on). </p>
+
+<p>But to do so, I have to open the project and perform the ""Transform Current Package"" Tab on every package I want to transform.</p>
+
+<p>It works well but I want to know, if it's possible to write an automatic script in C# to perform this Task. 
+There is a COM to change nearly everything in your projectbrowser. I can access every diagram, element or package through this COM. But I didn't find any method to transform the model.</p>
+
+<p>My Question is: <strong>Can I execute this tranfsormation with an automated script using C#?</strong></p>
+"
+12911489,752129,2012-10-16 9:25:34,<eclipse><mda><emf>,2,0,0,494,1,Developing Applications using Eclipse Modelling Framework,"<p>I'm looking for an MDA (Model Driven Architecture) tools available. I have started with EMF(Eclipse Modelling Framework).</p>
+
+<p>It's look fine for generating core classes. </p>
+
+<p>How it will be helpful to generate one end to end application?</p>
+
+<pre><code>To generate UI elements (JSP/JSF/so on...)
+To generate Entities and ORM's
+To generate EJB's/Web Services 
+</code></pre>
+
+<p>Is there extensive modelling has provided in EMF to achieve these requirements?</p>
+
+<p>or any other tools are available to capture an end to end applications in modelling and drive the same to development ?</p>
+"
+12431413,541106,2012-09-14 20:17:34,<eclipse><dsl><xtext><mda>,1,1,0,1156,3,XText multiple file extensions,"<p>I'd like to define a language with different elements that shall be contained into different kind of files though linked (i.e. similarly to C++ with .cpp and .h files).
+Is grammar mixin the right way to do that? If so how should I proceed?</p>
+"
+12069894,265195,2012-08-22 9:16:45,<eclipse><mde><eclipse-atl>,1,0,0,90,1,Invoke ATL model transformation in MWE2,"<p>Is it possible to invoke an ATL model transformation within an MWE2 workflow?</p>
+"
+11753821,541106,2012-08-01 6:38:46,<eclipse-emf><acceleo><mda>,1,0,0,178,1,running ACCELEO from ACCELEO on the DSL contained in model elements,"<p>I have a UML activity with OpaqueActions containing a DSL. The DSL grammar is expressed by means of XText thus there is an EMF ECORE model and editor for it. I have an ACCELEO M2T transformation transforming UML activities in text and I'd like to trigger (from such transformation) another transformation (from the DSL meta-model to text) providing as input the DSL containing in the opaque actions of the activity. Is there any way to easily do that?</p>
+"
+11668907,1127860,2012-07-26 12:05:01,<eclipse-emf><model-driven-development>,1,0,0,427,0,How to generate Java-code from model of EMF,"<p>I created a model with EMF and generated an Eclipse plugin for this model.
+In the plugin I can now define an instance of that model. But now I want do generate Java-code from this instance. How can I do this?</p>
+"
+11668563,1127860,2012-07-26 11:45:01,<dsl><eclipse-emf><mda><model-driven-development>,2,1,0,715,2,How to use EMF with an own meta-model,"<p>my goal is to create a meta-model for a model but one level higher than by default with EMF.
+The meta-model(2) should define the possibilities and restrictions for the possible modles(1).
+Then I want to generate Java-code of this model.</p>
+
+<p>2 meta-model
+1 model
+0 Java-code</p>
+
+<p>So the model(1) is a kind of DSL and the meta-model is the definition of that DSL.</p>
+
+<p>How can I do this. Is it possible with EMF or is there any other plugin from the Eclipse Modeling Project?</p>
+
+<p>Im searching for some functionality like in this tool: <a href=""http://www.actifsource.com/"" rel=""nofollow"">http://www.actifsource.com/</a> but without specifying an extra generator template.</p>
+"
+11376162,541106,2012-07-07 15:16:39,<eclipse><acceleo><mda><emf>,1,0,0,1036,0,ACCELEO: creating file in path depending on the model structure,"<p>In an Acceleo Model to Text transformation I would like to create a file for a UML class coherent with the packages of containing the class (the class namespace in the UML model).
+The problem I am facing is that I have to do that in line as the [file] command requires it so I am trying something like this</p>
+
+<pre><code>[file ((c.allOwningPackages().name.-&gt;sep('/')).concat(c.name.concat('.hpp')),false,'UTF-8')]
+</code></pre>
+
+<p>but I am getting this error on the concat:</p>
+
+<pre><code> Cannot find operation (concat(String)) for the type (OclAny)
+</code></pre>
+
+<p>What is the right way of doing this?</p>
+"
+10838004,127320,2012-05-31 16:59:52,<java><eclipse><eclipse-emf-ecore><mdd><emf>,3,2,2,862,2,Model based UI generaton (runtime or build time),"<p>We have a EMF based meta-model that is used to configure our application. Until now we used the EMF editor (eclipse based) to create various configuration instances of our product. This has worked well so far but we now want to support the config creation from web UI. </p>
+
+<p>What are the options I have for creating a rich UI from meta-models on Java platform? I know about Naked Objects, Roo etc but those generate end to end application with focus on persistence. I just need good looking UI that can populate the model.</p>
+
+<p>Edit
+One of the comments suggest a combination of Magritte + Glamour. But those are for smalltalk. Are there any equivalents in Java?</p>
+"
+9775717,998101,2012-03-19 18:24:42,<uml><enterprise-architect><mda><rational-rose>,2,0,2,7960,8,"Rational, EA, or something else?","<p>Does anyone have any thoughts on Rational Software Architect vs Sparx EA? Are there other tools I should be looking at? Specifically, I'm interested in the following;</p>
+
+<ol>
+<li>Adherance to some methodology (RUP, SOMF, etc.) -- we're not settled
+on one now, but need to pick one that suits a SoA architecture.</li>
+<li>Multi-modeling -- I need to model all the way from hardware (ideally
+with cost/spec tracking across physical and cloud) to deployment,
+classes/services, etc. </li>
+<li>Roundtrip -- reverse our code/data and then generate stubs as we add new classes to the model. </li>
+<li>NoSQL support </li>
+<li>Focus on code -- we're less data-centric, we don't need to model
+tables and entities that much.</li>
+</ol>
+
+<p>It seems both rational and EA will do most of this, rational obviously leads with RUP. Neither seems to do the hardware mapping/costing, though sybase powerbuilder does -- not sure if im missing something here?</p>
+
+<p>Any advice on how to properly evaluate/choose one? Anything else I should look at?</p>
+"
+9571845,403455,2012-03-05 18:24:16,<eclipse-emf><eclipse-emf-ecore><metamodel><model-driven-development><mdsd>,2,0,0,373,2,Can I make an Ecore metamodel that enables models to reference Java classes?,"<p>Suppose I want to design an Ecore metamodel that looks something like this, designed to be used to ""run"" a list of classes:</p>
+
+<pre><code>JavaClassRunnerList
+   0..* JavaClass
+</code></pre>
+
+<p>And assume I have some Java project that has classes named <code>PrintsHello</code>, <code>PrintsSeparator</code>, and <code>PrintsWorld</code>.</p>
+
+<p>I'd like to be able to then write models that look like this:</p>
+
+<pre><code>JavaClassRunnerList
+   PrintsHello.class
+   PrintsSeparator.class
+   PrintsWorld.class
+   PrintsSeparator.class
+   PrintsSeparator.class
+</code></pre>
+
+<p>I want my model to be able to include a Java project and to recognize its classes as choices for the model references (possibly co-located in the same project the model is in.) </p>
+
+<p>Is this possible?</p>
+"
+9383880,318292,2012-02-21 19:29:50,<java><eclipse><osgi><eclipse-emf><mde>,2,0,0,697,0,Loading same plugin twice with different version in Eclipse,"<p>I have two different versions of an EMF plugin which loads a certain .xmi. The latter version has been changed so that the xmi from the previous version is incompatible. What I want to do is to load the xmi's with the first plugin and then programatically build a model using the newer plugin thus migrating older models. They are identical apart from some changes within an EMF model.</p>
+
+<p>How do I load these plugins? Is it possible? Are there better strategies?</p>
+"
+8202231,1056442,2011-11-20 14:37:14,<jpa><enterprise-architect><mda>,4,1,0,3867,2,How can I transform Entity-Based diagram to a JPA java code,"<p>I have class diagram created with ""Sparx Enterprise Architect v8.0"" and i need to generate JPA-based classes with annotations that reflect relations to use it in the code. 
+The problem is that i can convert it to EJB but not JPA which is required for my task.</p>
+"
+8124875,541106,2011-11-14 16:39:33,<eclipse><eclipse-emf><eclipse-emf-ecore><mda>,1,0,0,637,1,Action Language for Foundational UML (ALF),"<p>Is there any Eclipse implementation of the OMG Action Language for Foundational UML (ALF)?
+thank you</p>
+"
+6321592,794676,2011-06-12 11:07:32,<java><java-ee><generator><mda>,2,0,0,628,1,Is there an open source complete Java EE MDA framework?,"<p>I'm looking for a Java EE MDA framework that generates a complete Java EE application.
+I mean starting by modeling with some tool like magicdraw sybase PowerDesigner then it generates the java classes (hibernate or JPA if possible) and finally the presentation layer is generated based on the model.</p>
+
+<p>ie:
+Suppose my UML model has a class called Person (id, firstName, lastName), then the framework will generate the java source and the .class files. After that in the presentation layer I can let the CRUD operations be generated based on my model.</p>
+
+<p>I have searched on the net but unfortunately [edit: could not find anything?] (except Spring ROO but it does not start from the UML model).</p>
+"
+4570358,220485,2010-12-31 13:25:43,<version-control><mda>,2,0,1,136,1,What has been done in the field of versioning models?,"<p>We had a rather nice lecture about Model driven architecture by a guy from Model Labs. 
+One thing that got me intrigued was the version control for models ( not to be confused with different models of version control) - or the lack of thereof. By version control for models he meant a way to version XML, EMF files which preserves their semantic. </p>
+
+<p>So, I'm interested in what has been done so far on that field (he mentioned something about SVN and Moodle, though I could have misheard him). The Google search yielded nothing so I'm turning to the wisdom of the Stack Overflow. </p>
+
+<p>I'm looking mostly for information in the form of books, articles, links.</p>
+"
+4479883,532070,2010-12-18 20:00:38,<java><model><eclipse-emf><mda><metamodel>,2,5,1,3210,1,MDA : Model Driven Architecture,"<p>Need a idea for developing very simple application demonstrating concepts of MDA.</p>
+"
+4149579,403455,2010-11-10 22:05:12,<eclipse-emf><mda><mdsd>,2,0,1,3096,3,How can I create a reference to existing model objects?,"<p>I'm new to MDSD/EMF but am making great progress thanks to Eclipse's support.</p>
+
+<p>I created a toy model as answered yesterday as awynne suggested, and I'm very close.  I'm only using EMF and its generated tree editor.</p>
+
+<p>Here's a summary of my EMF meta-model:</p>
+
+<pre><code>- EClass: Widget
+  - name
+
+- EClass: WidgetReference
+  - aWidgetReference : Widget [0..1] Containment = false
+
+- EClass: WidgetContainer
+  - myWidgets : Widget [0..*] Containment = true
+
+- EClass: ReferenceContainer
+  - myReferences : WidgetReference [0..*] Containment = true
+
+- EClass: TopLevelClass
+  - myWidgetContainer    : [1] WidgetContainer    Containment = true
+  - myReferenceContainer : [1] ReferenceContainer Containment = true
+</code></pre>
+
+<p>What's happening now is that in the generated tree editor for the model, I create everything starting from the TopLevelClass.  I can successfully create multiple widgets in the WidgetContainer, and I can create a single WidgetReference in the ReferenceContainer and associate it with a specific Widget.  </p>
+
+<p>In case anyone runs into this, there is a bug in the generated EMF editor code:</p>
+
+<p>When I try to add more than one WidgetReference to the ReferenceContainer, the tree editor only shows the first WidgetReference under the ReferenceContainer.  If I click on the WidgetReferences item in the tree, it does show multiple WidgetReferences in the properties view.  It just won't let me see them in the tree, and therefore won't let me select them to change their reference to associate it to an actual widget.  </p>
+
+<p>The workaround to this is to create as many references as you need, save and close the model, and then re-open it.  Upon re-opening it, all of the references will be shown.</p>
+
+<p>Thanks for any help/guidance.</p>
+
+<p>Jeff</p>
+"
+4109062,426724,2010-11-05 18:48:09,<java><uml><playframework><model-driven-development>,6,0,0,1120,1,UML Modeling Tool For Use With Java+Playframework,"<p>I'm looking for a good modeling tool to use for designing java applications that use the playframework.  Considerations:</p>
+
+<ol>
+<li>Should be able to generate valid java code for skeleton of play app </li>
+<li>Should be able to round trip java code and update model appropriately</li>
+<li>Shouldn't be too cumbersome -- I don't want to be generating reams of complicated diagrams that serve no purpose.  My goal is to be able to quickly model the design for an app I have in my head, hit ""Generate"" and have stubbed out java code the members of my team and I can start filling in.</li>
+<li>Cost is not a serious concern.</li>
+<li>Eclipse integration is a major plus</li>
+<li>Learning curve/availability of <em>good</em> resources to learn is an important consideration</li>
+</ol>
+
+<p>Does such a modeling tool exist?  Playing with Visual Paradigm now.  Am I going down a blind alley by even wanting to do this?  I know modeling etc. has kind of fallen out of favor with the focus on Agility and all, but it seems like this would be much quicker than a) trying to explain to everyone I work with how I envision the app working and b) manually writing tons of boilerplate code.</p>
+"
+5492455,541106,2011-03-30 21:10:13,<eclipse><model><mda><eclipse-emf><eclipse-emf-ecore>,2,0,2,966,2,"Ecore, genmodel and OCL","<p>I am defining the meta model of a domain specific modeling language by means of Ecore in EMF. I therefore generate an editor from the related genmodel I can use to create models conform to the meta-model. 
+I would like to specify some OCL constraint on the values that some elements of the meta-model can assume. It would be very nice if I could specify these constraint in the Ecore model  and have the related checks automatically generated editor Java code. </p>
+
+<p>Is there a standard way to do that? </p>
+"
+2652918,318477,2010-04-16 12:34:28,<android><mda><mdsd><metamodel>,6,1,1,826,2,Where is the Android Metamodel located?,"<p>I would like to use Android for Model-Driven-Software-Development.</p>
+
+<p>For this, I need to locate the Android Model in the SDK. I already searched a while for it, but were not able to find it. Has anyone an idea where it could be?</p>
+
+<p>Is it possible, that it is the AndroidManifest.xml-File in the folder android-sdk-\platforms\android-x\android.jar? After unpacking this file, I am not able to open that file correctly on Windows XP, because a lot of characters have the wrong character set. </p>
+
+<p>Or is it also possible, that it is only located in the source code?</p>
+
+<p>Thanks in advance,
+Dominik</p>
+"
+2303999,174701,2010-02-20 22:27:41,<embedded><model-driven-development><rhapsody>,3,0,1,905,7,What is your review process for Rhapsody development?,"<p>My team is using the IBM's Rhapsody tool to do real-time embedded development. Unfortunately, we are unhappy with our current review process.</p>
+
+<p>More specifically, we've had difficulty because:</p>
+
+<ul>
+<li>there is a lack of a good diff tool for diagram changes</li>
+<li>the Rhapsody diff tool doesn't generate reports that you can use in a review</li>
+<li>source file history is spotty because source files are products in MDD thus not configured in a VCS at a high granularity</li>
+<li>running diffs on source code sometimes pulls in unrelated changes made by other devs</li>
+<li>sometimes changing a property of a model element changes dozens of source files</li>
+<li>it's easy to change a source file through a property change and not know it</li>
+</ul>
+
+<p>Does anyone have any tips for making peer reviews on Rhapsody development robust but low-hassle? Any best practices and lessons learned you would like to share? I'm not looking for a mature process write-up; tidbits I didn't know about would be great.</p>
+"
+1872955,226480,2009-12-09 10:21:02,<unit-testing><uml><mda><model-based-testing>,1,0,0,1099,0,Rhapsody TestConductor Experiences,"<p>I was wondering whether anybody out there is actively using <em>Rhapsody TestConductor</em>? Or has tried it for a while, but then decided to turn it down for a particular reason?
+If so, <em>what are your experiences</em>, in which field do you apply it, what are the shortcomings, or why did you turn it down?</p>
+
+<p>At the moment we're considering TestConductor as our tool of choice for testing as it's already integrated into Rhapsody, and would like to find out how applicable it is to our project (btw, we're using Rhapsody 7.4 in C).</p>
+
+<p>P.S: Recommendations on good books about Model Based Testing are also appreciated.</p>
+"
+1864578,78453,2009-12-08 4:25:26,<embedded><methodology><real-time><model-driven-development>,4,0,2,941,4,What are good tools for using Model Driven Development with Embedded work?,"<p>I believe there has been some up-take of model-driven development / engineering (aka OMGs model driven architecture) in the real-time and embedded software development sectors. What tools and tool vendors have people had experience with? </p>
+
+<p>Google gives me lots of academic papers and a vendor or two (IBMs Rational Rose Technical Developer and VisSim).</p>
+
+<p>Additionally, any information on model format (UML?), target languages/environments for the platform specific models (C? RTOSs?), and testing (logic-based?) would be greatly appreciated.</p>
+"
+620188,74806,2009-03-06 19:49:53,<testing><model><model-driven><mbt>,6,0,0,7722,4,Recommended Model Based Testing Tools,"<p>Does anyone have any suggestions on what Model Based Testing Tools to use? Is Spec Explorer/SPEC# worth it's weight in tester training?</p>
+
+<p>What I have traditionally done is create a Visio Model where I call out the states and associated variables, outputs and expected results from each state. Then in a completely disconnected way, I data drive my test scripts with those variables based on that model. But, they are not connected. I want a way to create a model, associate the variables in a business friendly way, that will then build the data parameters for the scripts.</p>
+
+<p>I can't be the first person to need this. Is there a tool out there that will do basically that? Short of developing it myself.</p>
+"
+119815,3966,2008-09-23 8:23:29,<java><hibernate><domain-driven-design><hbm><mda>,1,0,0,432,0,Transform .HBM model to annotated pojos,"<p>We have our domain model declared in rusty old hbm files,  we wish to move to POJOs annotated with the javax.persistence.* annotations.</p>
+
+<p>Has anyone had experience doing so?  </p>
+
+<p>Are there tools that we could employ?</p>
+"
+51660,123,2008-09-09 11:38:54,<model-driven>,7,0,1,1039,5,Metamodelling tools,"<p>What tools are available for metamodelling? </p>
+
+<p>Especially for developing diagram editors, at the moment trying out <a href=""http://www.eclipse.org/modeling/gmf/"" rel=""nofollow noreferrer"">Eclipse GMF</a></p>
+
+<p>Wondering what other options are out there? 
+Any comparison available?</p>
+"
+34046283,4850941,2015-12-02 15:16:50,<model><dsl><model-driven-development>,1,0,0,282,1,Differences between MDSD & MDD,"<p>I would like to know if there is any difference between:</p>
+
+<ol>
+<li>Model-Driven Software Development (MDSD)</li>
+<li>Model-Driven Development (MDD)</li>
+</ol>
+
+<p>I always find these two terms in many articles and public literature, but no one highlights the differences.</p>
+"
+25505240,413531,2014-08-26 11:54:47,<php><code-generation><dsl><abstraction><model-driven-development>,1,2,1,230,2,"PHP: Generate code from abstraction (xml, json, data base, ...)","<p><em><strong>Note</strong> Feel free to suggest a better title as I think 'generate code' and 'abstraction' might not be the best expressions for what I want to ask :)</em></p>
+
+<p>I'm looking for a <strong>good pattern/standard way</strong> to generate PHP code from some sort of abstraction layer.</p>
+
+<h2>Example</h2>
+
+<p>I've built a set of classes that act es text-processing filters. These filters can be chained together to transform some input-text into some other output text, e.g.</p>
+
+<pre><code>Input ""Hello 'CRUEL' World"" 
+&gt;&gt; RegexFilter('(.*?)') [extract everything between '']
+&gt;&gt; ToLowerFilter [lowercase the extracted text]
+Output: cruel
+</code></pre>
+
+<p><strong>Resulting Code</strong></p>
+
+<p>The corresponding source code looks something like this:</p>
+
+<pre><code>$input = ""Hello 'CRUEL' world"";
+$pattern = ""#(.*?)#"";
+$first = new RegexFilter($pattern);
+$second = new ToLowerFilter();
+$first-&gt;setNextFilter($second);
+$ouput = $first-&gt;Transform($input);
+echo $output; // cruel
+</code></pre>
+
+<p>I would like to create some sort of <em>abstraction layer</em>, so that the end user (non-programmer) can built his own filter chain without writing code by himself. By ""abstraction"" I mean something like XML, JSON, stored in a database, etc.</p>
+
+<p><strong>XML example (suggestion)</strong> </p>
+
+<pre><code>&lt;filters&gt;
+ &lt;filter name='Regex'&gt;
+  &lt;properties&gt;
+   &lt;property name='pattern'&gt;'(.*)'&lt;/property&gt;
+  &lt;/properties&gt;
+  &lt;nextfilter name='ToLower'&gt;
+   &lt;properties/&gt;
+  &lt;/filter&gt;
+ &lt;/filter&gt;
+&lt;/filters&gt; 
+</code></pre>
+
+<p><strong>Remark</strong>: The example is very simplistic. Think of more advanced things like ""complex objects as properties for filters"", ""inheritance of filters"" (the above filter could get the name ""RegexToLowerFilter"" and can be referenced by other filters), etc.</p>
+
+<p><strong>Approaches / Ideas</strong></p>
+
+<p>Is there standard way to tackle this sort of problem? So far I've thought of building a custom XML, JSON, etc. serializer/deserializer for every filter but that seems like a lot of work and is potentially error prone because it's done individually for every filter. Further I guess that would require to make <em>every possible dependency</em> also serilizable in the same fashion - which can be problematic when using third party libraries (e.g. <a href=""https://github.com/Peekmo/JsonPath/"" rel=""nofollow"">JsonPath</a>).</p>
+
+<p>I suppose the most elegant way would be the creation of <a href=""http://en.wikipedia.org/wiki/Domain-specific_programming_language"" rel=""nofollow"">Domain Specific Language</a>. Unfortunately building a compiler is not the easiest task and probably not always appropriate for every problem in that space. (Then again, feel free to correct me :))</p>
+
+<p><strong>TL;DR</strong></p>
+
+<p>I'm looking for a suitable way / pattern to built an abstraction layer between the (non-progammer) end user and my source code. The solution should take the ""simplified"" abstraction and ""generate"" the corresponding code.</p>
+"
+22513896,3100186,2014-03-19 17:39:34,<uml><system-design><mda><mde>,4,2,1,608,2,What is the differences between Traditional code-based engineering and model-driven engineering approaches?,"<p>I've found this paragraph in the literature but I didn't understand the meaning of it</p>
+
+<blockquote>
+  <p>Design practice is moving from traditional code-based engineering,
+  with a strong division of work along the development life cycle, to
+  model-driven engineering approaches where all people in the design
+  flow can have their saying on the models.</p>
+</blockquote>
+
+<p>Any help would be very appreciated</p>
+"
+49150984,5385862,2018-03-07 11:37:56,<database><mda>,1,0,0,51,0,MDA (Model Driven Architecture),"<p>I have a doubt about MDA. </p>
+
+<p>And this is my doubt, 
+I can used the MDA concepts in a architecture that is not related to it(e.g ER), ?</p>
+"
+14922826,606726,2013-02-17 15:42:01,<mda><model-driven-development><mde>,3,0,0,523,2,How much is Eclipse EMF related to the OMG MDA standard?,"<p>I am looking for a new MDA tool to try out for modelling and code generation. This is not for any work related project yet, but for testing purposes. I only used the Merode approach until now (using jMermaid for modelling and the accompagnied code generator) but want to try out something new.</p>
+
+<p>Since EMF is integrated in Eclipse I see a lot of positive reasons to try it out. But after reading some documentation and online articles, I wonder how much it adopts the OMG MDA standards and how much it doesn't.</p>
+
+<p>For example I found the following text </p>
+
+<blockquote>
+  <p>If, on the other hand, you have already bought into the idea of modeling, and even the Model Driven Architecture (MDA) big picture,3 you should think of EMF as a technology that is moving in that direction, but more slowly than immediate widespread adoption. You can think of EMF as MDA on training wheels.</p>
+</blockquote>
+
+<p>on <a href=""http://www.informit.com/articles/article.aspx?p=1323360&amp;seqNum=2"" rel=""nofollow"">http://www.informit.com/articles/article.aspx?p=1323360&amp;seqNum=2</a></p>
+
+<p>But I can nowhere find a concise list of what points of the OMG standard are implemented and which ones are left out or interpreted differently. Anyone that can help out with that?
+(And if there are other, more recommended tools, I'm always open to suggestions.)</p>
+"
+14040951,536299,2012-12-26 13:01:22,<hibernate><domain-driven-design><hbm2ddl><model-driven-development>,1,0,0,103,0,Generic term for hbm2ddl.auto (entity classes to DDL) capability,"<p>I would like to know what the <strong>generic term</strong> is for hibernate's Entity classes to DDL (<strong>hbm2ddl</strong>) capability.</p>
+
+<p>Is it <strong><em>Domain Driven Design</em></strong> or <strong><em>Model Driven Development</em></strong> or something else?</p>
+"
+2485746,280391,2010-03-21 3:05:24,<uml><modeling><model-driven-development>,12,8,7,6133,19,Is UML a programming language?,"<p>Could UML be used to program a computer system on its own, without a supporting implementation language, e.g. diagrams straight to machine code (maybe via C or C++ etc), without human coding intervention.</p>
+"
+5265897,175399,2011-03-10 21:04:54,<code-generation><generator><mdd>,2,2,0,254,0,Is implementing a code generator a sort of model driven design/ model driven software developement?,"<p>Is implementing a code generator a sort of model driven design/ model driven software developement or are both methods completely different?</p>
+
+<p>For instance, when you use the Entity Framework code generation. Is this a kind of model driven design? </p>
+
+<p>Does it makes any differents on using a model or a meta model when I use the term model driven design?</p>
+
+<p>No more answers?</p>
+"
+5913704,742062,2011-05-06 15:37:19,<model><terminology><transformation><mdd>,3,0,2,1474,3,Model-driven development: What is a transform?,"<p>As I understand it, model-driven development (MDD) allows automation whereby programs/models are automatically generated from their corresponding models via the application of transformations.</p>
+
+<p>All I know about transformations is that they are some way of storing a developer's platform-specific expertise. </p>
+
+<p>But what exactly is a transformation?</p>
+"
+5897996,649727,2011-05-05 12:53:41,<haskell><functional-programming><model-driven-development>,2,2,4,1424,5,Model-driven Software Development vs. Haskell,"<p>Just reading the (german) Wiki-Article about Model-Driven SW-Development (MDSD). Summing up the Wiki-Definition: </p>
+
+<ul>
+<li>MDSD is about the DRY-Principle (Dont repeat youself)</li>
+<li>MDSD is about the Design of DSLs (Domain Specific Languages) and Generators</li>
+<li>More concise description of problems (through the higher level of abstraction of the respective DSLs) is possible through MDSD.</li>
+</ul>
+
+<p>Since I know and use higher-order functional programming I wonder, and my actual question is: 
+Is MDSD nothing but a desparate attempt to inject (a part of) the powerful features higher-order functional programming offers into programming languages / paradigms which inherently lack those features?</p>
+
+<p>(Or did I misunderstand and could MDSD even be used to substantially support higher-order functional programming?)</p>
+"
+16648305,2277094,2013-05-20 11:16:27,<platform-independent><mda><model-driven-development>,2,0,0,149,0,Are the Model-driven architecture feasible?,"<p>I want to ask some questions about MDA:</p>
+
+<p>First, I know that there exist tools that you can write code in one language and then the code be generated in another, for example in 'GWT' Java code is transformed to Javascript, or some mobile development tools that transform HTML+Javascript to native code for different platforms. Are these transformations consider as MDA or is something different?</p>
+
+<p>Except that using MDA part of the code is generated automatically are there any other reason that increase programmer's productivity?</p>
+
+<p>Compared to traditional development, will switching to MDA worth the value (immediately) and is that possible in reality?</p>
+"
+9523258,356011,2012-03-01 20:09:13,<java><architecture><metaprogramming><mda>,3,1,1,963,5,Is model driven architecture worth it and what is the state of the art in the tooling?,"<p>We have a recurring problem in our shop where we end up with 3 or 4 different representations of the same class/entity.  </p>
+
+<p>A java version, an xml version, a hibernate version, a json version... you get the point.  </p>
+
+<p>Obviously this creates maintenance problems.</p>
+
+<p>Model driven architecture is probably more than this, but what I'd really like is a system that lets me define a class or an entity once, in one way, and then generate various representations.  (maybe I am not using the correct terminology for this)</p>
+
+<p>It really isn't that straight forward, of course, because let's say we have a java object that we want to turn into JSON for sending over the wire - there might not be an exact 1-1 correspondence between the members in the java object to the fields in JSON - there might be some optimizations, or whatever.</p>
+
+<p>I've looked at things like AndroMDA and EMF in the past, and found them either lacking or clumsy.  I do not know how they stack up these days, or what other systems there are.</p>
+
+<p>What are SO's opinions on MDA and or meta-data driven programming?   Have the tools become mature enough for serious consideration?</p>
+
+<p>Thanks.</p>
+"
+4837002,294000,2011-01-29 12:57:25,<uml><mdd>,3,0,2,438,2,I don't like MDD but like UML - why should I use MDD if I think it is useless ?,"<p>I am a java software developer/architect and I like UML.</p>
+
+<p>Saying that I also hate the java generated code.</p>
+
+<p>I don't see any value trying to generate the skeleton of my application: </p>
+
+<ul>
+<li>creating empty classes is really easy and I don't need a tool to do that</li>
+<li>also I cannot reuse the generated code because the way it is generated makes it impossible to reuse</li>
+</ul>
+
+<p>The dilemma for me is that my requirements changed so quickly that I need to be able to implement the new demand immediately into an existing code. </p>
+
+<p>My problem is that if I generate my code from my model and then manually develop inside the generated codebase, I cannot generate code again using a model because my modification would be erased. </p>
+
+<p>Except I copy/paste the changes back and forth. That is an enormous effort for too few results. Therefore I do not use MDD but still use a lot UML.</p>
+
+<h1>Could UML be successful in a project without MDD code generation ?</h1>
+
+<p>I am asking this question because I have a new boss who wants to introduce full MDD process with IBM RSA and today I prefer to have live code and model synchronization or merge with Omondo. </p>
+
+<ul>
+<li>Why change a running and proven system? </li>
+<li>Why systematically generate code from a model while I can do it directly in the code and just merge it later with the model?</li>
+<li>Why get crap database code generation which cannot even be deployed while I can add stereotype in order to get java annotation and use them with hibernate to generate my database?</li>
+</ul>
+
+<p>One of the reason for boss's change is to get a better project documentation in HTML format. I highly doubt this and think he is looking for more control on delivery and does not know what else to invent!</p>
+
+<p>Other argumentative reasons: </p>
+
+<ul>
+<li>Use a product from a large and stable company. </li>
+<li>Have a full model available which could be deployed in any other language. <br/>
+(This is why for me MDD is stupid because it is impossible to deploy on any platform any server, any database just from a model. So why to waste my time?)</li>
+</ul>
+
+<p>Please give me some arguments in order to come back at next meeting and crash this stupid new MDD fan who wants to reorganize the way we work today!</p>
+"
+3096702,27083,2010-06-22 20:03:41,<mda><model-driven-development><mdsd>,5,1,1,1095,7,Is there a MDSD/MDA success story for a real world application?,"<p>I am currently facing a situation where I as an advocate of test driven development have to compete with an advocate of model driven software development (MDSD) / model driven architecture (MDA).</p>
+
+<p>In my opinion, code generation is a valuable tool in my toolbox and I make heavy use of templates and automation when needed. I also create diagrams in UML when I think this helps to understand the inner working or to discuss architecture on the white board. However, I strongly doubt that creating software via UML (creating statecharts and sequence diagrams to create working code not only skeletons of code) is more efficient for multi tier applications (database layer, business/domain layer and a Gui, maybe even distributed). It seems to me when it comes to MDSD, the CASE tooling suddenly isn't just a tool anymore but it is the thing to satisfy: As I see it, on the one hand, MDSDevelopers profit from the higher abstraction UML gives them but at the same time they are struggling with modifing the codegenerator/template/engine to fullfill their needs which might be easily implemented (and tested) if used another tool out of their toolbox (VisualStudio, Eclipse,...).</p>
+
+<p>All this makes me wonder if there has been a success story (suceess being that the product was rolled out in time, within the budged and with only few bugs and parts of the software have been reused later on) for a real world application which fullfills this creteria and has been developed using a strict model driven approach: </p>
+
+<ul>
+<li>it has nothing to do with the the Object Management Group (OMG) or with consultants related to MDSD/MDA/SOA/</li>
+<li>the application is not related to Business Process Modelling and is not a CASE tool itself</li>
+<li>the application is actively used by end user</li>
+<li>it has at least three tiers, including a user interface which goes beyond displaying raw table values and is not one of the common MDA/MDSD examples (""how to model a coffee machine, traffic light, dishwasher"").</li>
+</ul>
+"
+2702206,58523,2010-04-23 21:56:34,<architecture><mda>,4,1,1,1899,5,What are the benefits and risks of moving to a Model Driven Architecture approach?,"<p>I work for a company with about 350 employees and we are in the process of growing.  Our current codebase is not structured very well and we are looking both at how to improve it immediately (by organizing objects into namespaces, separating concerns, etc.) and moving to a model driven architecture approach, where we model and design everything first with uml, then generate code from that model.  We have been looking heavily at Sparx Systems Enterprise Architect (EA) (which is UML 2.0 capable) and we are also considering the tools in VS 2010.  I know there are other tools out there (Rational XDE being one) but I really do not think we can spend $1500+ per license at this point.  </p>
+
+<p>I'm not looking for answers on which tool is better than another but more for experiences moving from a cowboy coding environment (that is, little planning and design, just jump in and start coding) to a model driven architecture. Looking back was it helpful to your organization?  What are the pain points?  What are the risks?  What are the benefits?</p>
+"
+696021,80112,2009-03-30 4:46:17,<architecture><mda>,5,0,6,1442,9,"Are you doing MDA (Model Driven Architecture) right now? If so, what tools do you use, and how is it working out?","<p>Model Driven Architecture is the idea that you create models which express the problem you need to solve in a way that is free of any (or at least most) implementation technologies, and then you generate implementation for one or more specific platforms. The claim is that working at a higher level of abstraction is far more powerful and productive. In addition, your models outlive technologies (so you still have something when your first language / platform becomes obsolete that you can use for your next generation solution). Another key claimed benefit is that much of the boilerplate and ""grunt work"" can be generated. Once the computer understands the semantics of your situation, it can help you more.</p>
+
+<p><em>Some claim this approach is 10 times more productive, and that it is <strong>the way</strong> we will all be building software in 10 years.</em></p>
+
+<p>However, this is all just theory. I am wondering what the outcomes are when the rubber meets the road. Also, the ""official"" version of MDA is from the <a href=""http://omg.org"" rel=""nofollow noreferrer"">OMG</a>, and seems very heavy. It is heavily based on UML, which might be considered good or bad depending on who you ask (I'm leaning towards ""bad"").</p>
+
+<p>But, in spite of those concerns, it is hard to argue with the idea of working at a higher level of abstraction and ""teaching"" the computer to understand the semantics of your problem and solution. Imagine a series of ER models which simply express truth, and then imagine using those to generate a significant portion of your solution, first in one set of technologies and then again in another set of technologies.</p>
+
+<p>So, <strong>I'd love to hear from people who really are doing MDA right now (""official"" or not). What tools are you using? How is it working out? How much of the theoretical promise have you been able to capture? Do you see a true 10X effectiveness increase?</strong></p>
+"
+656522,76661,2009-03-18 0:18:28,<eclipse><mda>,2,0,0,524,3,Real-World QVT,"<p>QVT (Query View Transformation) is a OMG specification of a Model-to-Model transformation language. Some tools already implement it (Eclipse, androMDA). I'm wondering whether it is really used in real-world cases. Will it ever take off and be used to tackle real-world problems? Is anybody using the QVT language?</p>
+"
+308803,0,2008-11-21 13:43:45,<code-generation><mda><oslo><mdd>,3,0,3,1005,4,What is model driven development good for?,"<p>Microsoft, of Cairo fame, is working on Oslo, a <a href=""http://www.microsoft.com/soa/products/oslo.aspx"" rel=""nofollow noreferrer"">new modeling platform</a>. Bob Muglia, Senior Vice President of Microsoft Server &amp; Tools Business, states that the benefits of modeling have always been clear.</p>
+
+<p>In simple, practical terms, what are the clear benefits that Oslo bestows upon its users?</p>
+"
+21091,1793,2008-08-21 20:29:48,<paradigms><model-driven>,9,0,4,1267,7,"Do you use MDA/MDD/MDSD, any kind of model-driven approach? Will it be the future?","<p>Programming languages had several (r)evolutionary steps in their history. Some people argue that model-driven approaches will be The Next Big Thing. There are tools like openArchitectureWare, AndroMDA, Sculptor/Fornax Platform etc. that promise incredible productivity boosts. However, I made the experience that it is either rather easy in the beginning to get started but as well to get stuck at some point when you try something that was unanticipated or pretty hard to find enough information that tells you how to start your project because there may be a lot of things to consider.</p>
+
+<p>I think an important insight to get anything out of model-driven something is to understand that the model is not necessarily a set of nice pictures or tree model or UML, but may as well be a textual description (e.g. a state machine, business rules etc.).</p>
+
+<p>What do you think and what does your experience tell you? Is there a future for model-driven development (or whatever you may want to call it)?</p>
+
+<p><strong>Update:</strong> There does not seem to be a lot of interest in this topic. Please let me know, if you have any (good or bad) experience with model-driven approaches or why you think it's not interesting at all.</p>
+"
+70781,11562,2008-09-16 9:41:12,<model-driven-development><mdsd>,8,0,3,1100,8,What do you think of Model-driven Software Development?,"<p>I'm really interested to hear what you think about Model-driven Software Development for Java and/or .NET.</p>
+
+<p>Does it save time? Does it improve quality?</p>
+"
+7402003,318292,2011-09-13 12:39:09,<java><eclipse><acceleo><mdd><xpand>,5,0,0,2287,2,What is the difference between Acceleo and Xpand?,"<p>I have a DSL which is based on a custom metamodel, which in its turn is based on EMF/Ecore. I am trying to figure out which solution to choose, and I cant find any decent comparisons anywhere.</p>
+
+<p>Does anyone have any reasons why I should choose one over the other?</p>
+
+<p>What I know so far is that Acceleo uses a OMG standardized language, but it seems harder to use than Xpand.</p>
+"
+5797475,433392,2011-04-26 23:02:17,<compiler-construction><interpreter><mdsd>,2,0,0,61,1,How compares MDSD to model interpretation coding-style,"<p>Hopefully, this question isn't too generic:</p>
+
+<p>Conventionally, <a href=""http://en.wikipedia.org/wiki/Model-driven_engineering"" rel=""nofollow"">MDSD</a> is defined as the conversion of model specifications into sources of compilable programs.</p>
+
+<p>Besides this, one could interpret a model.</p>
+
+<p>While interpretation typically tends to be slower, the deployment of an updated model could be simpler.</p>
+
+<p>In general: Why would one compile a model using MDSD? When should one interpret models?</p>
+"
+262279,2894,2008-11-04 16:13:04,<dsl><model-driven-development><mdsd>,5,0,1,715,3,Tools (Best Practices?) for model driven development?,"<p>Model Driven Software Development.</p>
+
+<p>As I understand it it raises the abstraction level of the design to better reflect the domain the software will attempt to run in.  That's alot to say in just one sentence.</p>
+
+<p>The communication between the domain experts (customer) and the developers is crucial to make this methodology work.  What I want to know is if there is a tool suite or set of best practices that will help in the initial thrust of MDSD?  Once the domain is fleshed out what about mapping that model to an ORM (or whatever)?  </p>
+
+<p>I am just diving into the realm of MDSD and DSL so any constructive ideas or comments will be appriciated.</p>
+"
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+Software Enginnering Stack Exchange Discussions,,,,,,,,,,
+Id,OwnerUserId,CreationDate,Tags,AnswerCount,CommentCount,FavoriteCount,ViewCount,Score,Title,Body
+312909,147933,2016-03-16 12:14:34,<java><validation><pattern-matching><mdd>,3,0,,384,4,How to report multiple errors as a result of validation?,"<p>I have a class that transforms a complex model, for example an abstract syntax tree or intermediate model. The model can be either valid, invalid or partially invalid, i.e. it contains errors but some parts of it are valid and can be processed further.</p>
+
+<p>The most simple error reporting is to use exceptions:</p>
+
+<pre><code>public class Transformer {
+    public TargetModel transform(SourceModel model)
+      throws InvalidModelException {
+        // ...
+    }
+}
+</code></pre>
+
+<p>Obviously this doesn't allow to report multiple errors (at least if you don't attach further information to the exception) and exceptions should be for exceptional situations.</p>
+
+<p>Martin Fowler addressed this problem in his article <em><a href=""http://martinfowler.com/articles/replaceThrowWithNotification.html"" rel=""nofollow"">Replacing Throwing Exceptions with Notification in Validations</a></em>. If you apply his method to the problem you have something like this:</p>
+
+<pre><code>public abstract class Problem {
+    // ...
+}
+
+public final class ProblemA {
+    // ...
+}
+
+public final class ProblemB {
+    // ...
+}
+
+public class Transformer {
+    public static final class TransformationResult {
+        private Collection&lt;Problem&gt; problems;
+        private Optional&lt;TargetModel&gt; targetModel;
+        // ...
+    }
+
+    public TransformationResult transform(SourceModel model) {
+        // ...
+    }
+}
+</code></pre>
+
+<p>You then either use the visitor pattern or <code>instanceof</code> checks to distinguish the errors. It's a trade-off between type-safety and verbosity.</p>
+
+<p>Another possible solution would be to use the observer pattern:</p>
+
+<pre><code>public class Transformer {
+    public interface ProblemListener {
+        public void onProblemA(...);
+        public void onProblemB(...);
+        // ...
+    }
+
+    public void addProblemListener(ProblemListener listener) {
+        // ...
+    }
+
+    public void removeProblemListener(ProblemListener listener) {
+        // ...
+    }
+
+    public TargetModel transform(SourceModel model) {
+        // ...
+    }
+}
+</code></pre>
+
+<p>Using the observer pattern has the advantage that you don't have to accumulate the errors in memory and that excessive <code>instanceof</code> checks or visitors are not needed. On the other hand it obscures the control flow even more than the visitor pattern.</p>
+
+<p>I think all solutions do not lead to readable code. In a functional language and with enough memory I would use the second solution but in Java structural pattern matching either entails <code>instanceof</code> checks or use of visitor pattern which are both verbose. Is there anything that I have overlooked? Or implications that I did not consider? What is your experience with any of the solutions?</p>
+"
+199244,65701,2013-05-24 8:25:30,<uml><modeling><diagrams><semantics><mdd>,3,0,0,949,3,UML modelling semantics,"<p>In today's lecture about Modelling techniques with respect to MDD using UML the lecturer stated that it's absolutely necessary to give a (possibly) textual description about the semantics of each diagram you produce.</p>
+
+<p>In my opinion it's not necessary to describe semantics of diagram elements which are already standardized by UML. I can see that it's completely appropriate if you extend the standard UML by stereotypes/tagged values for any reason.</p>
+
+<p>In contrast, I think that standardization has in the ordinary case the intention to let people reason and talk about diagrams without the need to explain semantics every time. The only precondition is of course that they all rely on the same UML specification. </p>
+
+<p>Another point regarding MDD is that using different semantics from time to time for the same diagram kind makes code generation and automatic model transformation difficult in the end.</p>
+
+<ol>
+<li>Am I right with this notion?</li>
+<li>Are there some inherent interpretation ambiguities in UML to make it more general usable?</li>
+</ol>
+"
+196940,65701,2013-05-03 11:52:41,<architecture><uml><domain-model><mdd><modelling>,1,0,,196,0,Extending Composite Structure model generally/in Enterprise Architect,"<p>I'm currently on a project, which integrates domain specific techniques in the modelling tool Enterprise Architect through UML Profiles.</p>
+
+<p>The domain specfic model almost matches the structure of the composite structure model, with a couple of restrictions though, so I'm trying to use the model as a foundation for my restrictions.</p>
+
+<p>The questions: </p>
+
+<p>1) How can I generally extend models (like composite structure models) which themselves lie in the M1-layer of Meta-Object Facility? </p>
+
+<p>2) Is the element ""Part"" of composite structure diagrams a metaclass itself, which can be extended by stereotypes in UML profiles?</p>
+
+<p>Since the literature on these topics is not very exhaustive, I'm also looking for suggestions, too.</p>
+"
+153656,32342,2012-06-20 19:58:54,<design><uml><mdd>,4,1,3,2924,16,"""UML is the worst thing to ever happen to MDD."" Why?","<p><a href=""http://www.cs.utexas.edu/~wcook/"">William Cook</a> in a <a href=""https://twitter.com/w7cook/status/215527404184158209"">tweet</a> wrote that: </p>
+
+<p>""<em>UML is the worst thing to ever happen to MDD. Fortunately many people now realize this ...</em>""</p>
+
+<p>I would like to know the reasoning behind that claim (apparently, I'm not referring to his personal opinion). </p>
+
+<p>I've noticed that many people out there don't like UML that much. Also it is worth mentioning that he is in academia, where UML is preety much the holy grail of effective design and modelling.</p>
+"
+151804,966,2012-06-06 17:56:24,<open-source><mdd>,2,6,,761,0,Open source projects and MDD?,"<p>Model-driven development seems to have a lot of buzz in certain software engineering circles, but I've never encountered an open source MDD projects ""in the wild"". </p>
+
+<p>Are any open source projects using model-driven development? (I don't just mean that there's some UML documentation, but that the primary artifacts that the developers manipulate are the models, rather than the code).</p>
+"
+120529,2286,2011-11-18 18:59:48,<abstraction><modeling><mdd>,2,2,1,1219,7,What's the real benefit of meta-modeling?,"<p>After reading several texts about meta-modeling I still do not really get the practical benefit. Sometimes I think it is only an interesting mind game but no useful tool. Sure it is wise to clarify your modeling vocabulary: some may say <em>class</em> where others say <em>entity</em> or <em>concept</em>, but this is just simple documentation your modeling terminology. Meta-modeling, as I understand it, is more complex, as it tries to formalize and abstract modeling. Some good examples are  Keet's <a href=""http://www.meteck.org/pubcmk.html#EMMSAD08"">formal comparison of conceptual data modeling languages</a> (UML, ERM and ORM) from academia and the Meta Object Facility (MOF) from industry. To me MOF looks as impractical as CORBA, which was also created by OMG. In theory you could use meta-modeling to transform and integrate models in different modeling languages, but is anyone actually doing this?  </p>
+"
+82496,21523,2011-06-08 14:38:17,<.net><uml><mdd>,4,0,,219,5,Is defining every method/state per object in a series of UML diagrams representative of MDA in general?,"<p>I am currently working on a project where we use a framework that combines code generation and ORM together with UML to develop software. Methods are added to UML classes and are generated into partial classes where ""stuff happens"". For example, an UML class ""Content"" could have the method DeleteFromFileSystem(void). Which could be implemented like this:</p>
+
+<pre><code>public partial class Content
+{
+    public void DeleteFromFileSystem()
+    {
+        File.Delete(...);
+    }
+}
+</code></pre>
+
+<p>All methods are designed like this. Everything happens in these gargantuan logic-bomb domain classes.</p>
+
+<p>Is this how MDA or DDD or similar usually is done? For now my impression of MDA/DDD (which this has been called by higherups) is that it severely stunts my productivity (everything must be done The Way) and that it hinders maintenance work since all logic are roped, entrenched, interspersed into the mentioned gargantuan bombs.</p>
+
+<p><em>Please refrain from interpreting this as a rant - I am merely curious if this is typical MDA or some sort of extreme MDA</em></p>
+
+<p><strong>UPDATE</strong></p>
+
+<p>Concerning the example above, in my opinion Content shouldn't handle deleting itself as such. What if we change from local storage to Amazon S3, in that case we would have to reimplement this functionality scattered over multiple places instead of one single interface which we can provide a second implementation for.</p>
+"
+55679,10422,2011-03-07 19:32:24,<development-methodologies><mdd>,17,4,8,13369,18,Why aren't we all doing model driven development yet?,"<p>I am a true believer in Model Driven Development, I think it has the possibility to increase productivity, quality and predictability. When looking at <a href=""http://www.metacase.com/blogs/stevek/blogView?showComments=true&amp;entry=3446309083"" rel=""noreferrer"">MetaEdit</a> the results are amazing. <a href=""http://www.mendix.com/"" rel=""noreferrer"">Mendix</a> in the Netherlands is growing very very fast and has great results. </p>
+
+<p>I also know there are a lot of problems</p>
+
+<ul>
+<li>versioning of generators, templates and framework</li>
+<li>projects that just aren't right for model driven development (not enough repetition)</li>
+<li>higher risks (when the first project fails, you have less results than you would have with more traditional development)</li>
+<li>etc</li>
+</ul>
+
+<p>But still these problems seem solvable and the benefits should outweigh the effort needed. </p>
+
+<p><strong>Question</strong>: What do you see as the biggest problems that make you not even consider model driven development ?</p>
+
+<p>I want to use these answers not just for my own understanding but also as a possible source for a series of internal articles I plan to write.</p>
+"
+44915,15464,2011-02-07 10:56:19,<paradigms><mdd><dsl>,2,0,2,366,3,Is a Model Driven Architecture in Language Oriented Programming (MPS) feasible at this time,"<p>As a side project I am developing some sort of DSL where I describe a data model, and generate desired code files from it. I believe this is called <a href=""http://en.wikipedia.org/wiki/Model-driven_architecture"" rel=""nofollow"">Model Driven Architecture</a>. My partial existing implementation uses C#, CodeDOM, XML and XSLT to do this manually.</p>
+
+<p>I discovered there already exist better environments to do this in. The one which fascinated me the most is called <a href=""http://www.jetbrains.com/mps/"" rel=""nofollow"">MPS</a>, which follows the <a href=""http://en.wikipedia.org/wiki/Language-oriented_programming"" rel=""nofollow"">Language Oriented Programming</a> paradigm. <a href=""http://www.onboard.jetbrains.com/is1/articles/04/10/lop/"" rel=""nofollow"">This article</a>, written by a cofounder of JetBrains was a real eye opener for me. I truly believe LOP has a very good chance of becoming the next big programming paradigm once it has broader support. From my short experience with MPS, I noticed it is still mainly Java-oriented.</p>
+
+<p>My question is, how feasible is it to generate code files for other (multiple) languages instead of just Java. I don't need full language support from the start, so preferably, I need to be able to implement a language in a agile way. E.g. first support only one type, add access modifiers, ...</p>
+
+<p>Perhaps some other (free) environment already provides this out of the box.</p>
+
+<p>P.S.:
+I find it important to have a lot of control over the naming conventions and such of the generated code. This is one of the reasons why I started my own implementation.</p>
+
+<p>UPDATE:</p>
+
+<p>Judging from the answers it seems like people think I'm only interested in .NET solutions. This is not the case, any other suggestions are highly welcomed!</p>
+"
